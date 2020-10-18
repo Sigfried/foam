@@ -136,3 +136,10 @@ export function toTitleCase(word: string): string {
         .join(" ");
 }
 
+export function isSome<T>(value: T | null | undefined | void): value is T {
+  return value != null
+}
+
+export function isNone<T>(value: T | null | undefined | void): value is null | undefined | void {
+  return value == null
+}
